@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Sacramento&family=Raleway:wght@400;700&family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&family=Kanit:wght@400;700&family=Quicksand:wght@400;700&family=Oswald:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Satisfy&family=Yellowtail&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-gray-800 shadow-lg z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Shubhakar Jha</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+        <li><a href="#skills" class="hover:text-yellow-400">Skills</a></li>
+        <li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative"
+    style="background-image: url('assets/cover.jpeg');">
+    <h2 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-yellow-400">Shubhakar</span></h2>
+    <p class="text-lg text-gray-300 mb-6">Passionate Web Developer | Problem Solver</p>
+    <a href="#projects"
+      class="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-300 transition">View
+      My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800  profile-header">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-12 px-6">
+      <img src="assets/profile-2.jpeg" alt="Profile" class="rounded-full shadow-lg w-64 h-64 object-cover mb-8 md:mb-0">
+      <div>
+        <!-- <h3 class="text-3xl font-bold mb-4">About Me</h3> -->
+        <style>
+          .profile-header {
+            background: #030000;
+            background: linear-gradient(90deg, rgba(3, 0, 0, 1) 0%, rgba(7, 7, 117, 1) 100%, rgba(0, 212, 255, 1) 100%);
+          }
+        </style>
+        <p class="text-gray-300 leading-relaxed " style="font-family: 'Satisfy', cursive; font-size: 1.8rem;">
+          I'm a Computer Science graduate from JNTUH Hyderabad, passionate about coding in web development.
+          I specialize in Laravel and creating interactive, dynamic web applications.
+        </p>
+
+
+      </div>
+    </div>
+    </div>
+  </section>
+  <style>
+    #skills {
+      background: #000000;
+      background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    }
+  </style>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+      <!-- 
+    <h3 class="text-3xl font-bold text-center mb-12">Skills & Patterns</h3 -->
+
+      <div class="md:flex md:justify-center md:space-x-12">
+
+        <!-- Left Column: Skills -->
+        <div class="md:w-1/2 md:pr-8 text-center md:text-center">
+          <h4 class="text-2xl font-semibold mb-6">Skills</h4>
+          <ul class="list-disc list-inside space-y-3 text-gray-300 text-lg inline-block text-left">
+            <li>Laravel</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>jQuery | AJAX Request</li>
+            <li>Tailwind CSS</li>
+            <li>Bootstrap CSS</li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Patterns and Architecture -->
+        <div class="md:w-1/2 md:pl-8 md:border-l md:border-gray-600 text-center md:text-center">
+          <h4 class="text-2xl font-semibold mb-6">Patterns & Architecture</h4>
+          <ul class="list-disc list-inside space-y-3 text-gray-300 text-lg inline-block text-left">
+            <li>MVC</li>
+            <li>Repository Pattern</li>
+            <li>Service Container</li>
+            <li>RESTful APIs</li>
+            <li>Event Driven</li>
+            <li>Domain Driven Design</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section id="experience" class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative" style="background-image:  url('assets/project.jpg');">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Experience</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Company 1 -->
+      <div class="bg-gray-700 rounded-lg shadow p-6 flex items-center space-x-6">
+        <img src="assets/101infotech.jpg" alt="Company 1 Logo" class="w-20 h-20 object-contain">
+        <div>
+          <h4 class="font-bold text-lg mb-1">101 INFOTECH</h4>
+          <p class="text-gray-300 text-sm">Worked on backend CMS development and API integration, ensuring seamless communication between frontend and backend systems.</p>
+          <p class="text-gray-400 text-xs mt-2">Feb 2023 - July 2023</p>
+        </div>
+      </div>
+
+      <!-- Company 2 -->
+      <div class="bg-gray-700 rounded-lg shadow p-6 flex items-center space-x-6">
+        <img src="assets/techart.png" alt="Company 2 Logo" class="w-20 h-20 object-contain">
+        <div>
+          <h4 class="font-bold text-lg mb-1">Techart Trekkies</h4>
+          <p class="text-gray-300 text-sm">Created RESTful APIs and designed efficient database schemas to manage employee data and workflows.</p>
+          <p class="text-gray-400 text-xs mt-2">Dec 2024 - Current</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <style>
+  #projects{
+background: #928fcf;
+background: linear-gradient(90deg, rgba(146, 143, 207, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  }
+</style> -->
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-800" style="background-image:  url('assets/project-cover.jpg');"  >
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-gray-700 rounded-lg shadow hover:shadow-lg overflow-hidden flex flex-col">
+        <img src="assets/lakshya holdings.png" alt="Project" class="w-full h-48 object-cover">
+        <div class="p-4 flex-grow flex flex-col justify-center">
+          <h4 class="font-bold text-center mb-2">Lakshya Holdings</h4>
+          <p class="text-gray-300 text-sm">Built the backend CMS with integrating the frontend design</p>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg shadow hover:shadow-lg overflow-hidden flex flex-col">
+        <img src="assets/iig.jpg" alt="Project" class="w-full h-48 object-cover">
+        <div class="p-4 flex-grow flex flex-col justify-center">
+          <h4 class="font-bold text-center mb-2">GroupIIg - HRM</h4>
+          <p class="text-gray-300 text-sm">Created RESTful APIs with well-structured database design to efficiently manage employee data and workflows.</p>
+        </div>
+      </div>
+      <div class="bg-gray-700 rounded-lg shadow hover:shadow-lg overflow-hidden flex flex-col">
+        <img src="assets/imagine.png" alt="Project" class="w-full h-48 object-cover">
+        <div class="p-4 flex-grow flex flex-col justify-center">
+          <h4 class="font-bold text-center mb-2">Imagine Enquiry | Blogging Site</h4>
+          <p class="text-gray-300 text-sm">Added some cms features with some of the frontend designs and interactive features.</p>
+        </div>
+      </div>
+
+      <!-- Repeat for more projects -->
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-900 text-white">
+  <div class="container mx-auto px-6">
+<!--     <h3 class="text-3xl font-bold text-center mb-12">Contact Me</h3> -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name"
+          class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none">
+        <input type="email" placeholder="Your Email"
+          class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none">
+        <textarea placeholder="Your Message" rows="4"
+          class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"></textarea>
+        <button
+          class="w-full bg-yellow-400 text-gray-900 font-semibold py-2 rounded hover:bg-yellow-300 transition">Send</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-2xl font-semibold mb-4">Get In Touch</h4>
+          <p class="text-gray-300">Feel free to reach out to me via email, social media, or visit me at my location.</p>
+        </div>
+        <div class="space-y-3">
+          <p class="flex items-center"><i class="fas fa-envelope text-yellow-400 mr-3"></i> subhakarbro16@gmail.com</p>
+          <!-- <p class="flex items-center"><i class="fas fa-phone text-yellow-400 mr-3"></i> +91 98765 43210</p> -->
+          <p class="flex items-center"><i class="fas fa-map-marker-alt text-yellow-400 mr-3"></i> Kupondole, Lalitpur</p>
+        </div>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-yellow-400 hover:text-yellow-300"><i class="fab fa-linkedin text-2xl"></i></a>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300"><i class="fab fa-github text-2xl"></i></a>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300"><i class="fab fa-twitter text-2xl"></i></a>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300"><i class="fab fa-facebook text-2xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+  <!-- Footer -->
+  
+
+</body>
+
+</html>
