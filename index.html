@@ -22,7 +22,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+  #home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
+  @media (max-width: 640px) {
+    #home {
+      min-height: 100vh; /* makes sure image fills full screen */
+    }
+  }
+</style>
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -43,13 +55,15 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative"
-    style="background-image: url('assets/cover.jpeg');">
+  <section id="home"
+    class="min-h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat relative"
+    style="background-image: url('assets/cover.jpeg'); background-size: cover;">
     <h2 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-yellow-400">Shubhakar</span></h2>
     <p class="text-lg text-gray-300 mb-6">Passionate Web Developer | Problem Solver</p>
     <a href="#projects"
-      class="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-300 transition">View
-      My Work</a>
+      class="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-300 transition">
+      View My Work
+    </a>
   </section>
 
   <!-- About Section -->
@@ -191,14 +205,17 @@ background: linear-gradient(90deg, rgba(146, 143, 207, 1) 0%, rgba(9, 9, 121, 1)
           </div>
         </div>
 
-        <!-- Imagine Enquiry Blogging Site -->
+        <!-- Attendance Management System -->
         <div class="bg-gray-800 rounded-lg shadow hover:shadow-lg overflow-hidden flex flex-col">
-          <img src="assets/imagine.png" alt="Project" class="w-full h-48 object-cover">
+          <img src="assets/ams.jpg" alt="Project" class="w-full h-48 object-cover">
           <div class="p-4 flex-grow flex flex-col justify-center">
-            <h4 class="font-bold text-center text-white mb-2">Imagine Enquiry | Blogging Site</h4>
+            <h4 class="font-bold text-center text-white mb-2">Attendance Management System – Biometric Integration</h4>
             <p class="text-gray-300 text-sm text-justify">
-              Enhanced the platform with flexible CMS modules, improved frontend UI, and added interactive features such
-              as enquiry management, blog posting tools, and dynamic category filtering for seamless content navigation.
+              Developed a fully functional biometric-based Attendance Management System designed for seamless
+              integration into any website or enterprise application. The system captures real-time attendance logs,
+              processes biometric submissions, and provides accurate time tracking. Includes complete user management,
+              role permissions, reporting tools, and secure API endpoints, making it adaptable for schools, offices,
+              factories, and large organizations.
             </p>
           </div>
         </div>
