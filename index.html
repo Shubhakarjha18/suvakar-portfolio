@@ -1,165 +1,499 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubhakar Jha | Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
-</head>
-<body class="m-0 p-0">
-
+  </head>
+  <body class="m-0 p-0">
     <!-- FULL PAGE BG IMAGE — fixed so it stays behind everything -->
-    <div class="fixed inset-0 bg-[url('assets/background1.jpg')] bg-cover bg-center -z-10"></div>
+    <div
+      class="fixed inset-0 bg-[url('assets/background1.jpg')] bg-cover bg-center -z-10"
+    ></div>
     <!-- Dark overlay so content is readable -->
     <div class="fixed inset-0 bg-black/60 -z-10"></div>
 
     <!-- ENTIRE PAGE WRAPPER -->
     <div class="min-h-screen flex flex-col text-white">
-
-        <!-- NAVBAR -->
-        <nav class="flex items-center justify-between px-10 py-5 bg-black/30 backdrop-blur-sm border-b border-white/10">
-            <div class="text-2xl font-bold tracking-wide">
-                Shubhakar <span class="text-yellow-400">Jha</span>
-            </div>
-
-            <!-- Desktop Nav -->
-            <ul class="hidden md:flex gap-2 text-sm font-medium">
-                <li><button onclick="showTab('home')" data-tab="home" class="tab-btn px-4 py-2 rounded-full transition duration-300">Home</button></li>
-                <li><button onclick="showTab('about')" data-tab="about" class="tab-btn px-4 py-2 rounded-full transition duration-300">About</button></li>
-                <li><button onclick="showTab('projects')" data-tab="projects" class="tab-btn px-4 py-2 rounded-full transition duration-300">Projects</button></li>
-                <li><button onclick="showTab('skills')" data-tab="skills" class="tab-btn px-4 py-2 rounded-full transition duration-300">Skills</button></li>
-                <li><button onclick="showTab('contact')" data-tab="contact" class="tab-btn px-4 py-2 rounded-full transition duration-300">Contact</button></li>
-            </ul>
-
-            <a href="#" class="hidden md:block bg-yellow-400 text-black text-sm font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">Hire Me</a>
-            <button class="md:hidden text-2xl" onclick="toggleMenu()">&#9776;</button>
-        </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden bg-black/60 backdrop-blur-sm flex flex-col items-center gap-4 py-5 text-sm border-b border-white/10">
-            <button onclick="showTab('home')" class="hover:text-yellow-400 transition">Home</button>
-            <button onclick="showTab('about')" class="hover:text-yellow-400 transition">About</button>
-            <button onclick="showTab('projects')" class="hover:text-yellow-400 transition">Projects</button>
-            <button onclick="showTab('skills')" class="hover:text-yellow-400 transition">Skills</button>
-            <button onclick="showTab('contact')" class="hover:text-yellow-400 transition">Contact</button>
+      <!-- NAVBAR -->
+      <nav
+        class="flex items-center justify-between px-10 py-5 bg-black/30 backdrop-blur-sm border-b border-white/10"
+      >
+        <div class="text-2xl font-bold tracking-wide">
+          Shubhakar <span class="text-yellow-400">Jha</span>
         </div>
 
-        <!-- CONTENT AREA — sits on top of bg image -->
-        <div class="flex-1 flex items-center justify-center px-6 py-16">
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex gap-2 text-sm font-medium">
+          <li>
+            <button
+              onclick="showTab('home')"
+              data-tab="home"
+              class="tab-btn px-4 py-2 rounded-full transition duration-300"
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showTab('about')"
+              data-tab="about"
+              class="tab-btn px-4 py-2 rounded-full transition duration-300"
+            >
+              About
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showTab('projects')"
+              data-tab="projects"
+              class="tab-btn px-4 py-2 rounded-full transition duration-300"
+            >
+              Projects
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showTab('skills')"
+              data-tab="skills"
+              class="tab-btn px-4 py-2 rounded-full transition duration-300"
+            >
+              Skills
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showTab('contact')"
+              data-tab="contact"
+              class="tab-btn px-4 py-2 rounded-full transition duration-300"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
 
-            <!-- HOME -->
-            <div id="tab-home" class="tab-content active text-center max-w-2xl">
-                <h1 class="text-6xl md:text-7xl font-extrabold">Shubhakar <span class="text-yellow-400">Jha</span></h1>
-                <p class="mt-4 text-xl text-gray-300">Web Developer & UI Designer</p>
-                <p class="mt-4 text-gray-400">I build clean, modern and responsive web experiences.</p>
-                <button onclick="showTab('projects')" class="mt-8 bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition">View My Work</button>
-            </div>
+        <a
+          href="#"
+          class="hidden md:block bg-yellow-400 text-black text-sm font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition"
+          >Hire Me</a
+        >
+        <button class="md:hidden text-2xl" onclick="toggleMenu()">
+          &#9776;
+        </button>
+      </nav>
 
-            <!-- ABOUT -->
-            <div id="tab-about" class="tab-content max-w-2xl w-full bg-black/40 backdrop-blur-md rounded-2xl p-10 border border-white/10">
-                <h2 class="text-4xl font-bold text-yellow-400 mb-6">About Me</h2>
-                <p class="text-gray-300 leading-relaxed text-lg">I'm a web developer based in Nepal with experience building responsive and modern web applications. I love turning ideas into reality using clean code and great design.</p>
-                <ul class="mt-6 space-y-3 text-gray-400">
-                    <li>📍 Location: Nepal</li>
-                    <li>🎓 Background: Computer Science</li>
-                    <li>💼 Available for freelance work</li>
-                    <li>📧 shubhakar@example.com</li>
-                </ul>
-            </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden bg-black/60 backdrop-blur-sm flex flex-col items-center gap-4 py-5 text-sm border-b border-white/10"
+      >
+        <button
+          onclick="showTab('home')"
+          class="hover:text-yellow-400 transition"
+        >
+          Home
+        </button>
+        <button
+          onclick="showTab('about')"
+          class="hover:text-yellow-400 transition"
+        >
+          About
+        </button>
+        <button
+          onclick="showTab('projects')"
+          class="hover:text-yellow-400 transition"
+        >
+          Projects
+        </button>
+        <button
+          onclick="showTab('skills')"
+          class="hover:text-yellow-400 transition"
+        >
+          Skills
+        </button>
+        <button
+          onclick="showTab('contact')"
+          class="hover:text-yellow-400 transition"
+        >
+          Contact
+        </button>
+      </div>
 
-            <!-- PROJECTS -->
-            <div id="tab-projects" class="tab-content w-full max-w-4xl">
-                <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Projects</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition">
-                        <h3 class="text-xl font-bold mb-2">🎬 IMDb Clone</h3>
-                        <p class="text-gray-400 text-sm">A movie discovery app using TMDB API with search, filters, and detail pages.</p>
-                        <a href="#" class="mt-4 inline-block text-yellow-400 text-sm hover:underline">View Project →</a>
-                    </div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition">
-                        <h3 class="text-xl font-bold mb-2">🛒 E-Commerce App</h3>
-                        <p class="text-gray-400 text-sm">A full-stack shopping app with cart, checkout, and product management.</p>
-                        <a href="#" class="mt-4 inline-block text-yellow-400 text-sm hover:underline">View Project →</a>
-                    </div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition">
-                        <h3 class="text-xl font-bold mb-2">📝 Blog Platform</h3>
-                        <p class="text-gray-400 text-sm">A blogging platform where users can write, edit, and publish posts.</p>
-                        <a href="#" class="mt-4 inline-block text-yellow-400 text-sm hover:underline">View Project →</a>
-                    </div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition">
-                        <h3 class="text-xl font-bold mb-2">🌦️ Weather App</h3>
-                        <p class="text-gray-400 text-sm">Real-time weather app using OpenWeather API with location search.</p>
-                        <a href="#" class="mt-4 inline-block text-yellow-400 text-sm hover:underline">View Project →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SKILLS -->
-            <div id="tab-skills" class="tab-content w-full max-w-3xl">
-                <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Skills</h2>
-                <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">HTML5</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">CSS3</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">JavaScript</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">React.js</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">Tailwind CSS</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">Node.js</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">MongoDB</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">Git & GitHub</div>
-                    <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition">REST APIs</div>
-                </div>
-            </div>
-
-            <!-- CONTACT -->
-            <div id="tab-contact" class="tab-content w-full max-w-lg">
-                <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Contact Me</h2>
-                <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-8">
-                    <div class="mb-4">
-                        <label class="block text-sm text-gray-400 mb-1">Your Name</label>
-                        <input type="text" placeholder="John Doe" class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-sm text-gray-400 mb-1">Email</label>
-                        <input type="email" placeholder="john@example.com" class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500">
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-sm text-gray-400 mb-1">Message</label>
-                        <textarea rows="4" placeholder="Your message..." class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"></textarea>
-                    </div>
-                    <button class="w-full bg-yellow-400 text-black font-semibold py-3 rounded-lg hover:bg-yellow-300 transition">Send Message</button>
-                </div>
-            </div>
-
+      <!-- CONTENT AREA — sits on top of bg image -->
+      <div class="flex-1 flex items-center justify-center px-6 py-16">
+        <!-- HOME -->
+        <div id="tab-home" class="tab-content active text-center max-w-2xl">
+          <h1 class="text-6xl md:text-7xl font-extrabold">
+            <span class="text-yellow-400" id="name-text">Shubhakar Jha</span>
+          </h1>
+          <p class="mt-4 text-xl text-gray-300">
+            <span id="role-text">Web Developer</span>
+          </p>
+          <p class="mt-4 text-gray-400">
+            <span id="desc-text"
+              >I build clean, modern and responsive web experiences.</span
+            >
+          </p>
+          <button
+            onclick="showTab('projects')"
+            class="mt-8 bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition"
+          >
+            View My Work
+          </button>
         </div>
+
+        <!-- <script>
+          const name = document.getElementById("name-text").innerHTML;
+          const role = document.getElementById("role-text").innerHTML;
+          const desc = document.getElementById("desc-text").innerHTML;
+
+          document.getElementById("name-text").innerHTML = "";
+          document.getElementById("role-text").innerHTML = "";
+          document.getElementById("desc-text").innerHTML = "";
+
+          const texts = [
+            {
+              id: "name-text",
+              text: name,
+            },
+            {
+              id: "role-text",
+              text: role,
+            },
+            {
+              id: "desc-text",
+              text: desc,
+            },
+          ];
+
+          let currentText = 0;
+          let currentChar = 0;
+
+          function typeWriter() {
+            if (currentText >= texts.length) return;
+
+            const element = document.getElementById(texts[currentText].id);
+            const fullText = texts[currentText].text;
+
+            element.innerHTML = fullText.substring(0, currentChar + 1);
+
+            currentChar++;
+
+            if (currentChar < fullText.length) {
+              setTimeout(typeWriter, 50);
+            } else {
+              currentText++;
+              currentChar = 0;
+
+              setTimeout(typeWriter, 500);
+            }
+          }
+
+          typeWriter();
+        </script> -->
+        <!-- ABOUT -->
+        <div
+          id="tab-about"
+          class="tab-content max-w-2xl w-full bg-black/40 backdrop-blur-md rounded-2xl p-10 border border-white/10"
+        >
+          <h2 class="text-4xl font-bold text-yellow-400 mb-6">About Me</h2>
+          <p class="text-gray-300 leading-relaxed text-lg">
+            I'm a web developer based in Nepal with experience building
+            responsive and modern web applications. I love turning ideas into
+            reality using clean code and great design.
+          </p>
+          <ul class="mt-6 space-y-3 text-gray-400">
+            <li>📍 Location: Nepal</li>
+            <li>🎓 Background: Computer Science</li>
+            <li>💼 Available for freelance work</li>
+            <li>📧 shubhakar@example.com</li>
+          </ul>
+        </div>
+
+        <!-- PROJECTS -->
+        <div id="tab-projects" class="tab-content w-full max-w-4xl">
+          <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">
+            Projects
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition"
+            >
+              <h3 class="text-xl font-bold mb-2">🎬 IMDb Clone</h3>
+              <p class="text-gray-400 text-sm">
+                A movie discovery app using TMDB API with search, filters, and
+                detail pages.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-yellow-400 text-sm hover:underline"
+                >View Project →</a
+              >
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition"
+            >
+              <h3 class="text-xl font-bold mb-2">🛒 E-Commerce App</h3>
+              <p class="text-gray-400 text-sm">
+                A full-stack shopping app with cart, checkout, and product
+                management.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-yellow-400 text-sm hover:underline"
+                >View Project →</a
+              >
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition"
+            >
+              <h3 class="text-xl font-bold mb-2">📝 Blog Platform</h3>
+              <p class="text-gray-400 text-sm">
+                A blogging platform where users can write, edit, and publish
+                posts.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-yellow-400 text-sm hover:underline"
+                >View Project →</a
+              >
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition"
+            >
+              <h3 class="text-xl font-bold mb-2">🌦️ Weather App</h3>
+              <p class="text-gray-400 text-sm">
+                Real-time weather app using OpenWeather API with location
+                search.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-yellow-400 text-sm hover:underline"
+                >View Project →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div id="tab-skills" class="tab-content w-full max-w-3xl">
+          <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">
+            Skills
+          </h2>
+          <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              HTML5
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              CSS3
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              JavaScript
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              React.js
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              Tailwind CSS
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              Node.js
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              MongoDB
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              Git & GitHub
+            </div>
+            <div
+              class="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center hover:border-yellow-400 transition"
+            >
+              REST APIs
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="tab-contact" class="tab-content w-full max-w-lg">
+          <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">
+            Contact Me
+          </h2>
+          <div
+            class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-8"
+          >
+            <div class="mb-4">
+              <label class="block text-sm text-gray-400 mb-1">Your Name</label>
+              <input
+                type="text"
+                placeholder="John Doe"
+                class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm text-gray-400 mb-1">Email</label>
+              <input
+                type="email"
+                placeholder="john@example.com"
+                class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
+              />
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm text-gray-400 mb-1">Message</label>
+              <textarea
+                rows="4"
+                placeholder="Your message..."
+                class="w-full bg-white/10 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-500"
+              ></textarea>
+            </div>
+            <button
+              class="w-full bg-yellow-400 text-black font-semibold py-3 rounded-lg hover:bg-yellow-300 transition"
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-yellow-400', 'text-black');
-                btn.classList.add('text-white');
-            });
 
-            document.getElementById('tab-' + tabName).classList.add('active');
-            document.querySelectorAll(`[data-tab="${tabName}"]`).forEach(btn => {
-                btn.classList.add('bg-yellow-400', 'text-black');
-                btn.classList.remove('text-white');
-            });
+    const name = document.getElementById("name-text").innerHTML;
+    const role = document.getElementById("role-text").innerHTML;
+    const desc = document.getElementById("desc-text").innerHTML;
 
-            document.getElementById('mobileMenu').classList.add('hidden');
+    const texts = [
+        {
+            id: "name-text",
+            text: name,
+        },
+        {
+            id: "role-text",
+            text: role,
+        },
+        {
+            id: "desc-text",
+            text: desc,
+        },
+    ];
+
+    let currentText = 0;
+    let currentChar = 0;
+
+
+    function startTypeWriter() {
+
+        // Reset counters
+        currentText = 0;
+        currentChar = 0;
+
+        // Clear old text
+        texts.forEach(item => {
+            document.getElementById(item.id).innerHTML = "";
+        });
+
+        typeWriter();
+    }
+
+
+    function typeWriter() {
+
+        if (currentText >= texts.length) return;
+
+        const element = document.getElementById(texts[currentText].id);
+        const fullText = texts[currentText].text;
+
+        element.innerHTML = fullText.substring(0, currentChar + 1);
+
+        currentChar++;
+
+        if (currentChar < fullText.length) {
+
+            setTimeout(typeWriter, 50);
+
+        } else {
+
+            currentText++;
+            currentChar = 0;
+
+            setTimeout(typeWriter, 500);
         }
+    }
 
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
+
+    function showTab(tabName) {
+
+        document
+            .querySelectorAll(".tab-content")
+            .forEach((t) => t.classList.remove("active"));
+
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+
+            btn.classList.remove("bg-yellow-400", "text-black");
+            btn.classList.add("text-white");
+
+        });
+
+        document.getElementById("tab-" + tabName).classList.add("active");
+
+        document.querySelectorAll(`[data-tab="${tabName}"]`).forEach((btn) => {
+
+            btn.classList.add("bg-yellow-400", "text-black");
+            btn.classList.remove("text-white");
+
+        });
+
+        document.getElementById("mobileMenu").classList.add("hidden");
+
+        // Restart animation
+        if (tabName === "home") {
+            startTypeWriter();
         }
+    }
 
-        showTab('home');
-    </script>
-</body>
+
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+
+    // Initial load
+    showTab("home");
+
+</script>
+  </body>
 </html>
